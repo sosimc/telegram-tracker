@@ -26,8 +26,6 @@ from telethon import TelegramClient
 from telethon.tl.types import UserStatusOnline, UserStatusOffline
 from time import mktime, sleep
 
-import telethon.sync
-
 
 DATETIME_FORMAT = '%Y-%m-%d @ %H:%M:%S'
 
