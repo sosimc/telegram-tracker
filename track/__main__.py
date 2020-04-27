@@ -47,13 +47,7 @@ client.start()
 online = None
 last_offline = None
 while True:
-    if contact_id in ['me', 'self']:
-        # Workaround for the regression in Telethon that breaks get_entity('me'):
-        # https://github.com/LonamiWebs/Telethon/issues/1024
-        contact = client.get_me()
-    else:
-        contact = client.get_entity(contact_id)
-
+    contact = client.get_entity(contact_id)
     if isinstance(contact.status, UserStatusOffline):
         if online != False:
             online = False
